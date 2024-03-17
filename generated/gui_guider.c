@@ -145,15 +145,12 @@ void ui_img_rotate_animation(void * var, int32_t duration, int32_t delay, lv_coo
 void init_scr_del_flag(lv_ui *ui)
 {
   
-	ui->Main_Menu_del = true;
-	ui->Matter_connected_page_del = true;
-	ui->Matter_disconnect_page_del = true;
 	ui->Spotify_Page_del = true;
 }
 
 void setup_ui(lv_ui *ui)
 {
 	init_scr_del_flag(ui);
-	setup_scr_Matter_connected_page(ui);
-	lv_scr_load(ui->Matter_connected_page);
+	setup_scr_Spotify_Page(ui);
+	lv_scr_load(ui->Spotify_Page);
 }

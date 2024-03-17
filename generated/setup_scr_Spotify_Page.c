@@ -58,7 +58,7 @@ void setup_scr_Spotify_Page(lv_ui *ui)
 	lv_obj_set_style_border_width(ui->Spotify_Page_label_time, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_radius(ui->Spotify_Page_label_time, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_color(ui->Spotify_Page_label_time, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->Spotify_Page_label_time, &lv_font_Adventpro_regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->Spotify_Page_label_time, &lv_font_arial_16, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_opa(ui->Spotify_Page_label_time, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_letter_space(ui->Spotify_Page_label_time, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_line_space(ui->Spotify_Page_label_time, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -145,7 +145,7 @@ void setup_scr_Spotify_Page(lv_ui *ui)
 	lv_img_set_src(ui->Spotify_Page_img_song, &_song_cover_alpha_192x192);
 	lv_img_set_pivot(ui->Spotify_Page_img_song, 50,50);
 	lv_img_set_angle(ui->Spotify_Page_img_song, 0);
-	lv_obj_set_pos(ui->Spotify_Page_img_song, 12, 25);
+	lv_obj_set_pos(ui->Spotify_Page_img_song, -4, -255);
 	lv_obj_set_size(ui->Spotify_Page_img_song, 192, 192);
 
 	//Write style for Spotify_Page_img_song, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -206,7 +206,7 @@ void setup_scr_Spotify_Page(lv_ui *ui)
 	//Write codes Spotify_Page_Album_name
 	ui->Spotify_Page_Album_name = lv_label_create(ui->Spotify_Page_cont_Spotify);
 	lv_label_set_text(ui->Spotify_Page_Album_name, "Album name ");
-	lv_label_set_long_mode(ui->Spotify_Page_Album_name, LV_LABEL_LONG_SCROLL_CIRCULAR);
+	lv_label_set_long_mode(ui->Spotify_Page_Album_name, LV_LABEL_LONG_WRAP);
 	lv_obj_set_pos(ui->Spotify_Page_Album_name, 299, 100);
 	lv_obj_set_size(ui->Spotify_Page_Album_name, 182, 18);
 
@@ -229,7 +229,7 @@ void setup_scr_Spotify_Page(lv_ui *ui)
 	//Write codes Spotify_Page_Song_name
 	ui->Spotify_Page_Song_name = lv_label_create(ui->Spotify_Page_cont_Spotify);
 	lv_label_set_text(ui->Spotify_Page_Song_name, "test");
-	lv_label_set_long_mode(ui->Spotify_Page_Song_name, LV_LABEL_LONG_SCROLL_CIRCULAR);
+	lv_label_set_long_mode(ui->Spotify_Page_Song_name, LV_LABEL_LONG_WRAP);
 	lv_obj_set_pos(ui->Spotify_Page_Song_name, 298, 126);
 	lv_obj_set_size(ui->Spotify_Page_Song_name, 182, 18);
 
@@ -237,7 +237,7 @@ void setup_scr_Spotify_Page(lv_ui *ui)
 	lv_obj_set_style_border_width(ui->Spotify_Page_Song_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_radius(ui->Spotify_Page_Song_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_color(ui->Spotify_Page_Song_name, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->Spotify_Page_Song_name, &lv_font_Adventpro_regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->Spotify_Page_Song_name, &lv_font_arial_16, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_opa(ui->Spotify_Page_Song_name, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_letter_space(ui->Spotify_Page_Song_name, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_line_space(ui->Spotify_Page_Song_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -252,7 +252,7 @@ void setup_scr_Spotify_Page(lv_ui *ui)
 	//Write codes Spotify_Page_Artist_name
 	ui->Spotify_Page_Artist_name = lv_label_create(ui->Spotify_Page_cont_Spotify);
 	lv_label_set_text(ui->Spotify_Page_Artist_name, "test");
-	lv_label_set_long_mode(ui->Spotify_Page_Artist_name, LV_LABEL_LONG_SCROLL_CIRCULAR);
+	lv_label_set_long_mode(ui->Spotify_Page_Artist_name, LV_LABEL_LONG_WRAP);
 	lv_obj_set_pos(ui->Spotify_Page_Artist_name, 299, 156);
 	lv_obj_set_size(ui->Spotify_Page_Artist_name, 182, 18);
 
@@ -260,7 +260,7 @@ void setup_scr_Spotify_Page(lv_ui *ui)
 	lv_obj_set_style_border_width(ui->Spotify_Page_Artist_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_radius(ui->Spotify_Page_Artist_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_color(ui->Spotify_Page_Artist_name, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-	lv_obj_set_style_text_font(ui->Spotify_Page_Artist_name, &lv_font_Adventpro_regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_text_font(ui->Spotify_Page_Artist_name, &lv_font_arial_16, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_opa(ui->Spotify_Page_Artist_name, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_letter_space(ui->Spotify_Page_Artist_name, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_text_line_space(ui->Spotify_Page_Artist_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -271,6 +271,19 @@ void setup_scr_Spotify_Page(lv_ui *ui)
 	lv_obj_set_style_pad_bottom(ui->Spotify_Page_Artist_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_pad_left(ui->Spotify_Page_Artist_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 	lv_obj_set_style_shadow_width(ui->Spotify_Page_Artist_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+	//Write codes Spotify_Page_img_3
+	ui->Spotify_Page_img_3 = lv_img_create(ui->Spotify_Page_cont_Spotify);
+	lv_obj_add_flag(ui->Spotify_Page_img_3, LV_OBJ_FLAG_CLICKABLE);
+	lv_img_set_src(ui->Spotify_Page_img_3, &_giphy_0_alpha_183x180);
+	lv_img_set_pivot(ui->Spotify_Page_img_3, 50,50);
+	lv_img_set_angle(ui->Spotify_Page_img_3, 0);
+	lv_obj_set_pos(ui->Spotify_Page_img_3, 17, 29);
+	lv_obj_set_size(ui->Spotify_Page_img_3, 183, 180);
+
+	//Write style for Spotify_Page_img_3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+	lv_obj_set_style_img_opa(ui->Spotify_Page_img_3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+	lv_obj_set_style_shadow_width(ui->Spotify_Page_img_3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
 	//The custom code of Spotify_Page.
 	

@@ -16,125 +16,11 @@
 #endif
 
 
-static void Main_Menu_Matter_Bottom_event_handler (lv_event_t *e)
-{
-	lv_event_code_t code = lv_event_get_code(e);
-
-	switch (code) {
-	case LV_EVENT_CLICKED:
-	{
-		ui_load_scr_animation(&guider_ui, &guider_ui.Matter_connected_page, guider_ui.Matter_connected_page_del, &guider_ui.Main_Menu_del, setup_scr_Matter_connected_page, LV_SCR_LOAD_ANIM_NONE, 200, 200, false, true);
-		break;
-	}
-	default:
-		break;
-	}
-}
-static void Main_Menu_Spotify_Bottom_event_handler (lv_event_t *e)
-{
-	lv_event_code_t code = lv_event_get_code(e);
-
-	switch (code) {
-	case LV_EVENT_CLICKED:
-	{
-		ui_load_scr_animation(&guider_ui, &guider_ui.Spotify_Page, guider_ui.Spotify_Page_del, &guider_ui.Main_Menu_del, setup_scr_Spotify_Page, LV_SCR_LOAD_ANIM_NONE, 200, 200, false, true);
-		break;
-	}
-	default:
-		break;
-	}
-}
-void events_init_Main_Menu(lv_ui *ui)
-{
-	lv_obj_add_event_cb(ui->Main_Menu_Matter_Bottom, Main_Menu_Matter_Bottom_event_handler, LV_EVENT_ALL, NULL);
-	lv_obj_add_event_cb(ui->Main_Menu_Spotify_Bottom, Main_Menu_Spotify_Bottom_event_handler, LV_EVENT_ALL, NULL);
-}
-static void Matter_connected_page_event_handler (lv_event_t *e)
-{
-	lv_event_code_t code = lv_event_get_code(e);
-
-	switch (code) {
-	case LV_EVENT_CLICKED:
-	{
-		ui_load_scr_animation(&guider_ui, &guider_ui.Main_Menu, guider_ui.Main_Menu_del, &guider_ui.Matter_connected_page_del, setup_scr_Main_Menu, LV_SCR_LOAD_ANIM_NONE, 200, 200, false, true);
-		break;
-	}
-	default:
-		break;
-	}
-}
-static void Matter_connected_page_sw_1_event_handler (lv_event_t *e)
-{
-	lv_event_code_t code = lv_event_get_code(e);
-
-	switch (code) {
-	default:
-		break;
-	}
-}
-static void Matter_connected_page_label_1_event_handler (lv_event_t *e)
-{
-	lv_event_code_t code = lv_event_get_code(e);
-
-	switch (code) {
-	case LV_EVENT_VALUE_CHANGED:
-	{
-		lv_obj_set_style_text_font(guider_ui.Matter_connected_page_label_1, &lv_font_arial_16, 0);
-		lv_label_set_text(guider_ui.Matter_connected_page_label_1, "default");
-		break;
-	}
-	default:
-		break;
-	}
-}
-void events_init_Matter_connected_page(lv_ui *ui)
-{
-	lv_obj_add_event_cb(ui->Matter_connected_page, Matter_connected_page_event_handler, LV_EVENT_ALL, NULL);
-	lv_obj_add_event_cb(ui->Matter_connected_page_sw_1, Matter_connected_page_sw_1_event_handler, LV_EVENT_ALL, NULL);
-	lv_obj_add_event_cb(ui->Matter_connected_page_label_1, Matter_connected_page_label_1_event_handler, LV_EVENT_ALL, NULL);
-}
-static void Matter_disconnect_page_event_handler (lv_event_t *e)
-{
-	lv_event_code_t code = lv_event_get_code(e);
-
-	switch (code) {
-	case LV_EVENT_CLICKED:
-	{
-		ui_load_scr_animation(&guider_ui, &guider_ui.Main_Menu, guider_ui.Main_Menu_del, &guider_ui.Matter_disconnect_page_del, setup_scr_Main_Menu, LV_SCR_LOAD_ANIM_NONE, 200, 200, false, true);
-		break;
-	}
-	default:
-		break;
-	}
-}
-void events_init_Matter_disconnect_page(lv_ui *ui)
-{
-	lv_obj_add_event_cb(ui->Matter_disconnect_page, Matter_disconnect_page_event_handler, LV_EVENT_ALL, NULL);
-}
 static void Spotify_Page_event_handler (lv_event_t *e)
 {
 	lv_event_code_t code = lv_event_get_code(e);
 
 	switch (code) {
-	case LV_EVENT_CLICKED:
-	{
-		ui_load_scr_animation(&guider_ui, &guider_ui.Main_Menu, guider_ui.Main_Menu_del, &guider_ui.Spotify_Page_del, setup_scr_Main_Menu, LV_SCR_LOAD_ANIM_NONE, 200, 200, false, true);
-		break;
-	}
-	default:
-		break;
-	}
-}
-static void Spotify_Page_cont_Spotify_event_handler (lv_event_t *e)
-{
-	lv_event_code_t code = lv_event_get_code(e);
-
-	switch (code) {
-	case LV_EVENT_CLICKED:
-	{
-		ui_load_scr_animation(&guider_ui, &guider_ui.Main_Menu, guider_ui.Main_Menu_del, &guider_ui.Spotify_Page_del, setup_scr_Main_Menu, LV_SCR_LOAD_ANIM_NONE, 200, 200, false, true);
-		break;
-	}
 	default:
 		break;
 	}
@@ -216,7 +102,6 @@ static void Spotify_Page_Artist_name_event_handler (lv_event_t *e)
 void events_init_Spotify_Page(lv_ui *ui)
 {
 	lv_obj_add_event_cb(ui->Spotify_Page, Spotify_Page_event_handler, LV_EVENT_ALL, NULL);
-	lv_obj_add_event_cb(ui->Spotify_Page_cont_Spotify, Spotify_Page_cont_Spotify_event_handler, LV_EVENT_ALL, NULL);
 	lv_obj_add_event_cb(ui->Spotify_Page_label_time, Spotify_Page_label_time_event_handler, LV_EVENT_ALL, NULL);
 	lv_obj_add_event_cb(ui->Spotify_Page_bar_progress, Spotify_Page_bar_progress_event_handler, LV_EVENT_ALL, NULL);
 	lv_obj_add_event_cb(ui->Spotify_Page_Album_name, Spotify_Page_Album_name_event_handler, LV_EVENT_ALL, NULL);

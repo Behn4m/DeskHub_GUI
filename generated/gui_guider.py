@@ -289,252 +289,6 @@ def datetext_calendar_event_handler(e, obj):
             bg.set_style_bg_opa(lv.OPA.TRANSP, 0)
             target.delete()
 
-# Create Main_Menu
-Main_Menu = lv.obj()
-Main_Menu.set_size(536, 240)
-Main_Menu.set_scrollbar_mode(lv.SCROLLBAR_MODE.OFF)
-# Set style for Main_Menu, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Main_Menu.set_style_bg_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu.set_style_bg_color(lv.color_hex(0xffffff), lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu.set_style_bg_grad_dir(lv.GRAD_DIR.NONE, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-# Create Main_Menu_Matter_Bottom
-Main_Menu_Matter_Bottom = lv.btn(Main_Menu)
-Main_Menu_Matter_Bottom_label = lv.label(Main_Menu_Matter_Bottom)
-Main_Menu_Matter_Bottom_label.set_text("1.Matter")
-Main_Menu_Matter_Bottom_label.set_long_mode(lv.label.LONG.WRAP)
-Main_Menu_Matter_Bottom_label.align(lv.ALIGN.CENTER, 0, 0)
-Main_Menu_Matter_Bottom.set_style_pad_all(0, lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_pos(58, 59)
-Main_Menu_Matter_Bottom.set_size(213, 53)
-# Set style for Main_Menu_Matter_Bottom, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Main_Menu_Matter_Bottom.set_style_bg_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_bg_color(lv.color_hex(0xff0027), lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_bg_grad_dir(lv.GRAD_DIR.NONE, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_radius(25, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_shadow_width(3, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_shadow_color(lv.color_hex(0x0d4b3b), lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_shadow_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_shadow_spread(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_shadow_ofs_x(1, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_shadow_ofs_y(2, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_text_color(lv.color_hex(0xffffff), lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_text_font(test_font("montserratMedium", 18), lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_text_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Matter_Bottom.set_style_text_align(lv.TEXT_ALIGN.CENTER, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-# Create Main_Menu_Spotify_Bottom
-Main_Menu_Spotify_Bottom = lv.btn(Main_Menu)
-Main_Menu_Spotify_Bottom_label = lv.label(Main_Menu_Spotify_Bottom)
-Main_Menu_Spotify_Bottom_label.set_text("2.Spotify")
-Main_Menu_Spotify_Bottom_label.set_long_mode(lv.label.LONG.WRAP)
-Main_Menu_Spotify_Bottom_label.align(lv.ALIGN.CENTER, 0, 0)
-Main_Menu_Spotify_Bottom.set_style_pad_all(0, lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_pos(266, 146)
-Main_Menu_Spotify_Bottom.set_size(213, 53)
-# Set style for Main_Menu_Spotify_Bottom, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Main_Menu_Spotify_Bottom.set_style_bg_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_bg_color(lv.color_hex(0x009ea9), lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_bg_grad_dir(lv.GRAD_DIR.NONE, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_radius(25, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_shadow_width(3, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_shadow_color(lv.color_hex(0x0d4b3b), lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_shadow_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_shadow_spread(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_shadow_ofs_x(1, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_shadow_ofs_y(2, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_text_color(lv.color_hex(0xffffff), lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_text_font(test_font("montserratMedium", 18), lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_text_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-Main_Menu_Spotify_Bottom.set_style_text_align(lv.TEXT_ALIGN.CENTER, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-Main_Menu.update_layout()
-# Create Matter_connected_page
-Matter_connected_page = lv.obj()
-Matter_connected_page.set_size(536, 240)
-Matter_connected_page.set_scrollbar_mode(lv.SCROLLBAR_MODE.OFF)
-# Set style for Matter_connected_page, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Matter_connected_page.set_style_bg_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page.set_style_bg_color(lv.color_hex(0xffffff), lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page.set_style_bg_grad_dir(lv.GRAD_DIR.NONE, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-# Create Matter_connected_page_img_matterlogo
-Matter_connected_page_img_matterlogo = lv.img(Matter_connected_page)
-Matter_connected_page_img_matterlogo.set_src("B:MicroPython/_matter_logo_alpha_155x35.bin")
-Matter_connected_page_img_matterlogo.add_flag(lv.obj.FLAG.CLICKABLE)
-Matter_connected_page_img_matterlogo.set_pivot(50,50)
-Matter_connected_page_img_matterlogo.set_angle(0)
-Matter_connected_page_img_matterlogo.set_pos(14, 14)
-Matter_connected_page_img_matterlogo.set_size(155, 35)
-# Set style for Matter_connected_page_img_matterlogo, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Matter_connected_page_img_matterlogo.set_style_img_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-# Create Matter_connected_page_img_lamp
-Matter_connected_page_img_lamp = lv.img(Matter_connected_page)
-Matter_connected_page_img_lamp.set_src("B:MicroPython/_lamp_alpha_152x134.bin")
-Matter_connected_page_img_lamp.add_flag(lv.obj.FLAG.CLICKABLE)
-Matter_connected_page_img_lamp.set_pivot(50,50)
-Matter_connected_page_img_lamp.set_angle(0)
-Matter_connected_page_img_lamp.set_pos(378, 89)
-Matter_connected_page_img_lamp.set_size(152, 134)
-# Set style for Matter_connected_page_img_lamp, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Matter_connected_page_img_lamp.set_style_img_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-# Create Matter_connected_page_slider_1
-Matter_connected_page_slider_1 = lv.slider(Matter_connected_page)
-Matter_connected_page_slider_1.set_range(0, 100)
-Matter_connected_page_slider_1.set_mode(lv.slider.MODE.NORMAL)
-Matter_connected_page_slider_1.set_value(20, lv.ANIM.OFF)
-Matter_connected_page_slider_1.set_pos(271, 186)
-Matter_connected_page_slider_1.set_size(128, 16)
-# Set style for Matter_connected_page_slider_1, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Matter_connected_page_slider_1.set_style_bg_opa(130, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_slider_1.set_style_bg_color(lv.color_hex(0x393c41), lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_slider_1.set_style_bg_grad_dir(lv.GRAD_DIR.NONE, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_slider_1.set_style_radius(50, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_slider_1.set_style_outline_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_slider_1.set_style_shadow_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-# Set style for Matter_connected_page_slider_1, Part: lv.PART.INDICATOR, State: lv.STATE.DEFAULT.
-Matter_connected_page_slider_1.set_style_bg_opa(255, lv.PART.INDICATOR|lv.STATE.DEFAULT)
-Matter_connected_page_slider_1.set_style_bg_color(lv.color_hex(0xfffe00), lv.PART.INDICATOR|lv.STATE.DEFAULT)
-Matter_connected_page_slider_1.set_style_bg_grad_dir(lv.GRAD_DIR.NONE, lv.PART.INDICATOR|lv.STATE.DEFAULT)
-Matter_connected_page_slider_1.set_style_radius(50, lv.PART.INDICATOR|lv.STATE.DEFAULT)
-
-# Set style for Matter_connected_page_slider_1, Part: lv.PART.KNOB, State: lv.STATE.DEFAULT.
-Matter_connected_page_slider_1.set_style_bg_opa(255, lv.PART.KNOB|lv.STATE.DEFAULT)
-Matter_connected_page_slider_1.set_style_bg_color(lv.color_hex(0xfffe00), lv.PART.KNOB|lv.STATE.DEFAULT)
-Matter_connected_page_slider_1.set_style_bg_grad_dir(lv.GRAD_DIR.NONE, lv.PART.KNOB|lv.STATE.DEFAULT)
-Matter_connected_page_slider_1.set_style_radius(50, lv.PART.KNOB|lv.STATE.DEFAULT)
-
-# Create Matter_connected_page_sw_1
-Matter_connected_page_sw_1 = lv.switch(Matter_connected_page)
-Matter_connected_page_sw_1.set_pos(273, 144)
-Matter_connected_page_sw_1.set_size(48, 24)
-# Set style for Matter_connected_page_sw_1, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Matter_connected_page_sw_1.set_style_bg_opa(81, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_sw_1.set_style_bg_color(lv.color_hex(0x41485a), lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_sw_1.set_style_bg_grad_dir(lv.GRAD_DIR.NONE, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_sw_1.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_sw_1.set_style_radius(10, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_sw_1.set_style_shadow_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-# Set style for Matter_connected_page_sw_1, Part: lv.PART.INDICATOR, State: lv.STATE.CHECKED.
-Matter_connected_page_sw_1.set_style_bg_opa(133, lv.PART.INDICATOR|lv.STATE.CHECKED)
-Matter_connected_page_sw_1.set_style_bg_color(lv.color_hex(0xfffe00), lv.PART.INDICATOR|lv.STATE.CHECKED)
-Matter_connected_page_sw_1.set_style_bg_grad_dir(lv.GRAD_DIR.NONE, lv.PART.INDICATOR|lv.STATE.CHECKED)
-Matter_connected_page_sw_1.set_style_border_width(0, lv.PART.INDICATOR|lv.STATE.CHECKED)
-
-# Set style for Matter_connected_page_sw_1, Part: lv.PART.KNOB, State: lv.STATE.DEFAULT.
-Matter_connected_page_sw_1.set_style_bg_opa(255, lv.PART.KNOB|lv.STATE.DEFAULT)
-Matter_connected_page_sw_1.set_style_bg_color(lv.color_hex(0xfbfa45), lv.PART.KNOB|lv.STATE.DEFAULT)
-Matter_connected_page_sw_1.set_style_bg_grad_dir(lv.GRAD_DIR.NONE, lv.PART.KNOB|lv.STATE.DEFAULT)
-Matter_connected_page_sw_1.set_style_border_width(0, lv.PART.KNOB|lv.STATE.DEFAULT)
-Matter_connected_page_sw_1.set_style_radius(10, lv.PART.KNOB|lv.STATE.DEFAULT)
-
-# Create Matter_connected_page_label_1
-Matter_connected_page_label_1 = lv.label(Matter_connected_page)
-Matter_connected_page_label_1.set_text("80%")
-Matter_connected_page_label_1.set_long_mode(lv.label.LONG.WRAP)
-Matter_connected_page_label_1.set_pos(349, 152)
-Matter_connected_page_label_1.set_size(39, 16)
-# Set style for Matter_connected_page_label_1, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Matter_connected_page_label_1.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_radius(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_text_color(lv.color_hex(0x000000), lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_text_font(test_font("Adventpro_regular", 16), lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_text_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_text_letter_space(2, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_text_line_space(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_text_align(lv.TEXT_ALIGN.RIGHT, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_bg_opa(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_pad_top(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_pad_right(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_pad_bottom(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_pad_left(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_1.set_style_shadow_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-# Create Matter_connected_page_label_2
-Matter_connected_page_label_2 = lv.label(Matter_connected_page)
-Matter_connected_page_label_2.set_text("Connected")
-Matter_connected_page_label_2.set_long_mode(lv.label.LONG.WRAP)
-Matter_connected_page_label_2.set_pos(40, 117)
-Matter_connected_page_label_2.set_size(148, 32)
-# Set style for Matter_connected_page_label_2, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Matter_connected_page_label_2.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_radius(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_text_color(lv.color_hex(0x000000), lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_text_font(test_font("Alatsi_Regular", 16), lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_text_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_text_letter_space(2, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_text_line_space(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_text_align(lv.TEXT_ALIGN.CENTER, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_bg_opa(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_pad_top(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_pad_right(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_pad_bottom(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_pad_left(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_connected_page_label_2.set_style_shadow_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-Matter_connected_page.update_layout()
-# Create Matter_disconnect_page
-Matter_disconnect_page = lv.obj()
-Matter_disconnect_page.set_size(536, 240)
-Matter_disconnect_page.set_scrollbar_mode(lv.SCROLLBAR_MODE.OFF)
-# Set style for Matter_disconnect_page, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Matter_disconnect_page.set_style_bg_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page.set_style_bg_color(lv.color_hex(0xc1c1c1), lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page.set_style_bg_grad_dir(lv.GRAD_DIR.NONE, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-# Create Matter_disconnect_page_img_matterlogo
-Matter_disconnect_page_img_matterlogo = lv.img(Matter_disconnect_page)
-Matter_disconnect_page_img_matterlogo.set_src("B:MicroPython/_matter_logo_alpha_155x35.bin")
-Matter_disconnect_page_img_matterlogo.add_flag(lv.obj.FLAG.CLICKABLE)
-Matter_disconnect_page_img_matterlogo.set_pivot(50,50)
-Matter_disconnect_page_img_matterlogo.set_angle(0)
-Matter_disconnect_page_img_matterlogo.set_pos(14, 14)
-Matter_disconnect_page_img_matterlogo.set_size(155, 35)
-# Set style for Matter_disconnect_page_img_matterlogo, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Matter_disconnect_page_img_matterlogo.set_style_img_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-# Create Matter_disconnect_page_img_lamp
-Matter_disconnect_page_img_lamp = lv.img(Matter_disconnect_page)
-Matter_disconnect_page_img_lamp.set_src("B:MicroPython/_lamp_alpha_128x128.bin")
-Matter_disconnect_page_img_lamp.add_flag(lv.obj.FLAG.CLICKABLE)
-Matter_disconnect_page_img_lamp.set_pivot(50,50)
-Matter_disconnect_page_img_lamp.set_angle(0)
-Matter_disconnect_page_img_lamp.set_pos(392, 96)
-Matter_disconnect_page_img_lamp.set_size(128, 128)
-# Set style for Matter_disconnect_page_img_lamp, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Matter_disconnect_page_img_lamp.set_style_img_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-# Create Matter_disconnect_page_label_2
-Matter_disconnect_page_label_2 = lv.label(Matter_disconnect_page)
-Matter_disconnect_page_label_2.set_text("Is not connect !")
-Matter_disconnect_page_label_2.set_long_mode(lv.label.LONG.SCROLL_CIRCULAR)
-Matter_disconnect_page_label_2.set_pos(42, 117)
-Matter_disconnect_page_label_2.set_size(242, 43)
-# Set style for Matter_disconnect_page_label_2, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
-Matter_disconnect_page_label_2.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_radius(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_text_color(lv.color_hex(0x000000), lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_text_font(test_font("arial", 20), lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_text_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_text_letter_space(2, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_text_line_space(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_text_align(lv.TEXT_ALIGN.CENTER, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_bg_opa(240, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_bg_color(lv.color_hex(0xf10c0c), lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_bg_grad_dir(lv.GRAD_DIR.NONE, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_pad_top(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_pad_right(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_pad_bottom(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_pad_left(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-Matter_disconnect_page_label_2.set_style_shadow_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
-
-Matter_disconnect_page.update_layout()
 # Create Spotify_Page
 Spotify_Page = lv.obj()
 Spotify_Page.set_size(536, 240)
@@ -571,7 +325,7 @@ Spotify_Page_label_time.set_size(73, 18)
 Spotify_Page_label_time.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_label_time.set_style_radius(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_label_time.set_style_text_color(lv.color_hex(0x000000), lv.PART.MAIN|lv.STATE.DEFAULT)
-Spotify_Page_label_time.set_style_text_font(test_font("Adventpro_regular", 16), lv.PART.MAIN|lv.STATE.DEFAULT)
+Spotify_Page_label_time.set_style_text_font(test_font("arial", 16), lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_label_time.set_style_text_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_label_time.set_style_text_letter_space(2, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_label_time.set_style_text_line_space(0, lv.PART.MAIN|lv.STATE.DEFAULT)
@@ -587,8 +341,8 @@ Spotify_Page_label_time.set_style_shadow_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_label_artist = lv.label(Spotify_Page_cont_Spotify)
 Spotify_Page_label_artist.set_text("Artist:")
 Spotify_Page_label_artist.set_long_mode(lv.label.LONG.CLIP)
-Spotify_Page_label_artist.set_pos(235, 150)
-Spotify_Page_label_artist.set_size(306, 20)
+Spotify_Page_label_artist.set_pos(235, 155)
+Spotify_Page_label_artist.set_size(48, 15)
 # Set style for Spotify_Page_label_artist, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
 Spotify_Page_label_artist.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_label_artist.set_style_radius(0, lv.PART.MAIN|lv.STATE.DEFAULT)
@@ -610,7 +364,7 @@ Spotify_Page_label_song = lv.label(Spotify_Page_cont_Spotify)
 Spotify_Page_label_song.set_text("Song:")
 Spotify_Page_label_song.set_long_mode(lv.label.LONG.CLIP)
 Spotify_Page_label_song.set_pos(235, 125)
-Spotify_Page_label_song.set_size(306, 20)
+Spotify_Page_label_song.set_size(49, 14)
 # Set style for Spotify_Page_label_song, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
 Spotify_Page_label_song.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_label_song.set_style_radius(0, lv.PART.MAIN|lv.STATE.DEFAULT)
@@ -632,7 +386,7 @@ Spotify_Page_label_album = lv.label(Spotify_Page_cont_Spotify)
 Spotify_Page_label_album.set_text("Album:")
 Spotify_Page_label_album.set_long_mode(lv.label.LONG.CLIP)
 Spotify_Page_label_album.set_pos(235, 100)
-Spotify_Page_label_album.set_size(65, 18)
+Spotify_Page_label_album.set_size(48, 19)
 # Set style for Spotify_Page_label_album, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
 Spotify_Page_label_album.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_label_album.set_style_radius(0, lv.PART.MAIN|lv.STATE.DEFAULT)
@@ -655,7 +409,7 @@ Spotify_Page_img_song.set_src("B:MicroPython/_song_cover_alpha_192x192.bin")
 Spotify_Page_img_song.add_flag(lv.obj.FLAG.CLICKABLE)
 Spotify_Page_img_song.set_pivot(50,50)
 Spotify_Page_img_song.set_angle(0)
-Spotify_Page_img_song.set_pos(12, 25)
+Spotify_Page_img_song.set_pos(6, 22)
 Spotify_Page_img_song.set_size(192, 192)
 # Set style for Spotify_Page_img_song, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
 Spotify_Page_img_song.set_style_img_recolor_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
@@ -693,7 +447,7 @@ Spotify_Page_bar_progress = lv.bar(Spotify_Page_cont_Spotify)
 Spotify_Page_bar_progress.set_style_anim_time(1000, 0)
 Spotify_Page_bar_progress.set_mode(lv.bar.MODE.NORMAL)
 Spotify_Page_bar_progress.set_range(0, 100)
-Spotify_Page_bar_progress.set_value(50, lv.ANIM.OFF)
+Spotify_Page_bar_progress.set_value(20, lv.ANIM.OFF)
 Spotify_Page_bar_progress.set_pos(235, 210)
 Spotify_Page_bar_progress.set_size(275, 6)
 # Set style for Spotify_Page_bar_progress, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
@@ -710,15 +464,15 @@ Spotify_Page_bar_progress.set_style_radius(10, lv.PART.INDICATOR|lv.STATE.DEFAUL
 
 # Create Spotify_Page_Album_name
 Spotify_Page_Album_name = lv.label(Spotify_Page_cont_Spotify)
-Spotify_Page_Album_name.set_text("Album name ")
-Spotify_Page_Album_name.set_long_mode(lv.label.LONG.SCROLL_CIRCULAR)
+Spotify_Page_Album_name.set_text("Album test")
+Spotify_Page_Album_name.set_long_mode(lv.label.LONG.WRAP)
 Spotify_Page_Album_name.set_pos(299, 100)
 Spotify_Page_Album_name.set_size(182, 18)
 # Set style for Spotify_Page_Album_name, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
 Spotify_Page_Album_name.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Album_name.set_style_radius(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Album_name.set_style_text_color(lv.color_hex(0x000000), lv.PART.MAIN|lv.STATE.DEFAULT)
-Spotify_Page_Album_name.set_style_text_font(test_font("Adventpro_regular", 16), lv.PART.MAIN|lv.STATE.DEFAULT)
+Spotify_Page_Album_name.set_style_text_font(test_font("arial", 16), lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Album_name.set_style_text_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Album_name.set_style_text_letter_space(2, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Album_name.set_style_text_line_space(0, lv.PART.MAIN|lv.STATE.DEFAULT)
@@ -732,15 +486,15 @@ Spotify_Page_Album_name.set_style_shadow_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 
 # Create Spotify_Page_Song_name
 Spotify_Page_Song_name = lv.label(Spotify_Page_cont_Spotify)
-Spotify_Page_Song_name.set_text("test")
-Spotify_Page_Song_name.set_long_mode(lv.label.LONG.SCROLL_CIRCULAR)
-Spotify_Page_Song_name.set_pos(299, 127)
+Spotify_Page_Song_name.set_text("song test")
+Spotify_Page_Song_name.set_long_mode(lv.label.LONG.WRAP)
+Spotify_Page_Song_name.set_pos(298, 125)
 Spotify_Page_Song_name.set_size(182, 18)
 # Set style for Spotify_Page_Song_name, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
 Spotify_Page_Song_name.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Song_name.set_style_radius(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Song_name.set_style_text_color(lv.color_hex(0x000000), lv.PART.MAIN|lv.STATE.DEFAULT)
-Spotify_Page_Song_name.set_style_text_font(test_font("Adventpro_regular", 16), lv.PART.MAIN|lv.STATE.DEFAULT)
+Spotify_Page_Song_name.set_style_text_font(test_font("arial", 16), lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Song_name.set_style_text_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Song_name.set_style_text_letter_space(2, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Song_name.set_style_text_line_space(0, lv.PART.MAIN|lv.STATE.DEFAULT)
@@ -754,15 +508,15 @@ Spotify_Page_Song_name.set_style_shadow_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 
 # Create Spotify_Page_Artist_name
 Spotify_Page_Artist_name = lv.label(Spotify_Page_cont_Spotify)
-Spotify_Page_Artist_name.set_text("test")
-Spotify_Page_Artist_name.set_long_mode(lv.label.LONG.SCROLL_CIRCULAR)
-Spotify_Page_Artist_name.set_pos(299, 156)
+Spotify_Page_Artist_name.set_text("artist test")
+Spotify_Page_Artist_name.set_long_mode(lv.label.LONG.WRAP)
+Spotify_Page_Artist_name.set_pos(297, 155)
 Spotify_Page_Artist_name.set_size(182, 18)
 # Set style for Spotify_Page_Artist_name, Part: lv.PART.MAIN, State: lv.STATE.DEFAULT.
 Spotify_Page_Artist_name.set_style_border_width(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Artist_name.set_style_radius(0, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Artist_name.set_style_text_color(lv.color_hex(0x000000), lv.PART.MAIN|lv.STATE.DEFAULT)
-Spotify_Page_Artist_name.set_style_text_font(test_font("Adventpro_regular", 16), lv.PART.MAIN|lv.STATE.DEFAULT)
+Spotify_Page_Artist_name.set_style_text_font(test_font("arial", 16), lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Artist_name.set_style_text_opa(255, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Artist_name.set_style_text_letter_space(2, lv.PART.MAIN|lv.STATE.DEFAULT)
 Spotify_Page_Artist_name.set_style_text_line_space(0, lv.PART.MAIN|lv.STATE.DEFAULT)
@@ -776,92 +530,59 @@ Spotify_Page_Artist_name.set_style_shadow_width(0, lv.PART.MAIN|lv.STATE.DEFAULT
 
 Spotify_Page.update_layout()
 
-def Main_Menu_Matter_Bottom_event_handler(e):
-    code = e.get_code()
-    if (code == lv.EVENT.CLICKED):
-        lv.scr_load_anim(Matter_connected_page, lv.SCR_LOAD_ANIM.NONE, 200, 200, False)
-
-Main_Menu_Matter_Bottom.add_event_cb(lambda e: Main_Menu_Matter_Bottom_event_handler(e), lv.EVENT.ALL, None)
-
-def Main_Menu_Spotify_Bottom_event_handler(e):
-    code = e.get_code()
-    if (code == lv.EVENT.CLICKED):
-        lv.scr_load_anim(Spotify_Page, lv.SCR_LOAD_ANIM.NONE, 200, 200, False)
-
-Main_Menu_Spotify_Bottom.add_event_cb(lambda e: Main_Menu_Spotify_Bottom_event_handler(e), lv.EVENT.ALL, None)
-
-def Matter_connected_page_event_handler(e):
-    code = e.get_code()
-    if (code == lv.EVENT.CLICKED):
-        lv.scr_load_anim(Main_Menu, lv.SCR_LOAD_ANIM.NONE, 200, 200, False)
-
-Matter_connected_page.add_event_cb(lambda e: Matter_connected_page_event_handler(e), lv.EVENT.ALL, None)
-
-def Matter_connected_page_slider_1_event_handler(e):
-    code = e.get_code()
-
-Matter_connected_page_slider_1.add_event_cb(lambda e: Matter_connected_page_slider_1_event_handler(e), lv.EVENT.ALL, None)
-
-def Matter_connected_page_sw_1_event_handler(e):
-    code = e.get_code()
-
-Matter_connected_page_sw_1.add_event_cb(lambda e: Matter_connected_page_sw_1_event_handler(e), lv.EVENT.ALL, None)
-
-def Matter_connected_page_label_1_event_handler(e):
-    code = e.get_code()
-
-Matter_connected_page_label_1.add_event_cb(lambda e: Matter_connected_page_label_1_event_handler(e), lv.EVENT.ALL, None)
-
-def Matter_disconnect_page_event_handler(e):
-    code = e.get_code()
-    if (code == lv.EVENT.CLICKED):
-        lv.scr_load_anim(Main_Menu, lv.SCR_LOAD_ANIM.NONE, 200, 200, False)
-
-Matter_disconnect_page.add_event_cb(lambda e: Matter_disconnect_page_event_handler(e), lv.EVENT.ALL, None)
-
 def Spotify_Page_event_handler(e):
     code = e.get_code()
-    if (code == lv.EVENT.CLICKED):
-        lv.scr_load_anim(Main_Menu, lv.SCR_LOAD_ANIM.NONE, 200, 200, False)
 
 Spotify_Page.add_event_cb(lambda e: Spotify_Page_event_handler(e), lv.EVENT.ALL, None)
 
 def Spotify_Page_cont_Spotify_event_handler(e):
     code = e.get_code()
-    if (code == lv.EVENT.CLICKED):
-        lv.scr_load_anim(Main_Menu, lv.SCR_LOAD_ANIM.NONE, 200, 200, False)
 
 Spotify_Page_cont_Spotify.add_event_cb(lambda e: Spotify_Page_cont_Spotify_event_handler(e), lv.EVENT.ALL, None)
 
 def Spotify_Page_label_time_event_handler(e):
     code = e.get_code()
+    if (code == lv.EVENT.VALUE_CHANGED):
+        Spotify_Page_label_time.set_style_text_font(test_font("montserratMedium", 12), 0)
+        Spotify_Page_label_time.set_text("SAlam")
 
 Spotify_Page_label_time.add_event_cb(lambda e: Spotify_Page_label_time_event_handler(e), lv.EVENT.ALL, None)
 
 def Spotify_Page_bar_progress_event_handler(e):
     code = e.get_code()
+    if (code == lv.EVENT.VALUE_CHANGED):
+        Spotify_Page_bar_progress.add_state(lv.STATE.EDITED)
 
 Spotify_Page_bar_progress.add_event_cb(lambda e: Spotify_Page_bar_progress_event_handler(e), lv.EVENT.ALL, None)
 
 def Spotify_Page_Album_name_event_handler(e):
     code = e.get_code()
+    if (code == lv.EVENT.VALUE_CHANGED):
+        Spotify_Page_Album_name.set_style_text_font(test_font("arial", 16), 0)
+        Spotify_Page_Album_name.set_text("default")
 
 Spotify_Page_Album_name.add_event_cb(lambda e: Spotify_Page_Album_name_event_handler(e), lv.EVENT.ALL, None)
 
 def Spotify_Page_Song_name_event_handler(e):
     code = e.get_code()
+    if (code == lv.EVENT.VALUE_CHANGED):
+        Spotify_Page_Song_name.set_style_text_font(test_font("arial", 16), 0)
+        Spotify_Page_Song_name.set_text("default")
 
 Spotify_Page_Song_name.add_event_cb(lambda e: Spotify_Page_Song_name_event_handler(e), lv.EVENT.ALL, None)
 
 def Spotify_Page_Artist_name_event_handler(e):
     code = e.get_code()
+    if (code == lv.EVENT.VALUE_CHANGED):
+        Spotify_Page_label_artist.set_style_text_font(test_font("arial", 16), 0)
+        Spotify_Page_label_artist.set_text("default")
 
 Spotify_Page_Artist_name.add_event_cb(lambda e: Spotify_Page_Artist_name_event_handler(e), lv.EVENT.ALL, None)
 
 # content from custom.py
 
 # Load the default screen
-lv.scr_load(Main_Menu)
+lv.scr_load(Spotify_Page)
 
 while SDL.check():
     time.sleep_ms(5)

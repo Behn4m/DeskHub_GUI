@@ -18,25 +18,6 @@ extern "C" {
 typedef struct
 {
   
-	lv_obj_t *Main_Menu;
-	bool Main_Menu_del;
-	lv_obj_t *Main_Menu_Matter_Bottom;
-	lv_obj_t *Main_Menu_Matter_Bottom_label;
-	lv_obj_t *Main_Menu_Spotify_Bottom;
-	lv_obj_t *Main_Menu_Spotify_Bottom_label;
-	lv_obj_t *Matter_connected_page;
-	bool Matter_connected_page_del;
-	lv_obj_t *Matter_connected_page_img_matterlogo;
-	lv_obj_t *Matter_connected_page_img_lamp;
-	lv_obj_t *Matter_connected_page_slider_1;
-	lv_obj_t *Matter_connected_page_sw_1;
-	lv_obj_t *Matter_connected_page_label_1;
-	lv_obj_t *Matter_connected_page_label_2;
-	lv_obj_t *Matter_disconnect_page;
-	bool Matter_disconnect_page_del;
-	lv_obj_t *Matter_disconnect_page_img_matterlogo;
-	lv_obj_t *Matter_disconnect_page_img_lamp;
-	lv_obj_t *Matter_disconnect_page_label_2;
 	lv_obj_t *Spotify_Page;
 	bool Spotify_Page_del;
 	lv_obj_t *Spotify_Page_cont_Spotify;
@@ -51,6 +32,7 @@ typedef struct
 	lv_obj_t *Spotify_Page_Album_name;
 	lv_obj_t *Spotify_Page_Song_name;
 	lv_obj_t *Spotify_Page_Artist_name;
+	lv_obj_t *Spotify_Page_img_3;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);
@@ -83,23 +65,15 @@ void setup_ui(lv_ui *ui);
 
 extern lv_ui guider_ui;
 
-void setup_scr_Main_Menu(lv_ui *ui);
-void setup_scr_Matter_connected_page(lv_ui *ui);
-void setup_scr_Matter_disconnect_page(lv_ui *ui);
 void setup_scr_Spotify_Page(lv_ui *ui);
-LV_IMG_DECLARE(_matter_logo_alpha_167x37);
-LV_IMG_DECLARE(_lamp_alpha_152x134);
-LV_IMG_DECLARE(_matter_logo_alpha_155x35);
-LV_IMG_DECLARE(_lamp_alpha_128x128);
 LV_IMG_DECLARE(_song_cover_alpha_192x192);
 LV_IMG_DECLARE(_artists_alpha_64x64);
 LV_IMG_DECLARE(_Spotify_Logo_RGB_White_alpha_120x35);
+LV_IMG_DECLARE(_giphy_0_alpha_183x180);
 
-LV_FONT_DECLARE(lv_font_montserratMedium_18)
+LV_FONT_DECLARE(lv_font_arial_16)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
 LV_FONT_DECLARE(lv_font_montserratMedium_12)
-LV_FONT_DECLARE(lv_font_arial_16)
-LV_FONT_DECLARE(lv_font_arial_20)
 LV_FONT_DECLARE(lv_font_Adventpro_regular_16)
 
 
